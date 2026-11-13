@@ -1,12 +1,12 @@
 import { Clock, Star } from 'lucide-react';
 import { useScrollReveal } from '../lib/useScrollReveal';
 
-export function ZebGo() {
+export function GoZeb() {
   const headerRef = useScrollReveal<HTMLDivElement>(0.1, 0);
   const contentRef = useScrollReveal<HTMLDivElement>(0.1, 100);
 
   return (
-    <section id="zeb-go" className="py-16 lg:py-24 overflow-hidden relative">
+    <section id="gozeb" className="py-16 lg:py-24 overflow-hidden relative">
       {/* Background */}
       <div className="absolute inset-0 bg-corporate-950">
         <div className="mesh-blob w-[600px] h-[600px] bg-redirection-500/15 top-[-10%] left-[-10%] rounded-full animate-float" style={{ animationDelay: '0s' }} />

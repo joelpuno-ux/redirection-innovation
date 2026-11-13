@@ -28,7 +28,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#zeb-go" className="text-dark-300 hover:text-redirection-400 transition-colors text-sm">
+                <a href="#gozeb" className="text-dark-300 hover:text-redirection-400 transition-colors text-sm">
                   GoZeb
                 </a>
               </li>

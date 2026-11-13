@@ -1,7 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { KabyawEats } from './components/KabyawEats';
-import { ZebGo } from './components/ZebGo';
+import { GoZeb } from './components/GoZeb';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { MerchantsList } from './components/MerchantsList';
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <Hero />
       <KabyawEats />
-      <ZebGo />
+      <GoZeb />
       <About />
       <Contact />
       <MerchantsList />
