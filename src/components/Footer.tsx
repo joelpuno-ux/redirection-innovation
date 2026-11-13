@@ -1,4 +1,9 @@
+import { useState } from 'react';
+import { PrivacyPolicyModal } from './PrivacyPolicyModal';
+
 export function Footer() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
   return (
     <footer className="bg-corporate-950 text-corporate-200 border-t border-corporate-700">
       <div className="section-container pt-16 pb-8">
@@ -55,9 +60,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark-300 hover:text-redirection-400 transition-colors text-sm">
+                <button
+                  type="button"
+                  onClick={() => setShowPrivacy(true)}
+                  className="text-dark-300 hover:text-redirection-400 transition-colors text-sm text-left"
+                >
                   Privacy Policy
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -102,6 +111,8 @@ export function Footer() {
           </p>
         </div>
       </div>
+
+      {showPrivacy && <PrivacyPolicyModal onClose={() => setShowPrivacy(false)} />}
     </footer>
   );
 }
