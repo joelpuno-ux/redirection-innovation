@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Logo } from './Logo';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -28,14 +29,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-            <div className="w-10 h-10 bg-redirection-600 rounded-xl flex items-center justify-center shadow-lg shadow-[0_0_15px_rgba(220,38,38,0.3)]">
-              <span className="text-white font-bold text-xl">RI</span>
-            </div>
-            <div className="hidden md:block">
-              <h1 className="text-xl font-bold text-dark-900 tracking-tight">Redirection<span className="text-redirection-600">Innovation</span></h1>
-              <p className="text-xs text-redirection-600 font-medium uppercase tracking-wider">Philippines</p>
-            </div>
+          <div className="cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+            <Logo textClassName="hidden md:block" />
           </div>
 
           {/* Desktop Menu */}

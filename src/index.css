@@ -3,42 +3,42 @@
 @source "./index.html", "./src/**/*.{js,ts,jsx,tsx}";
 
 @theme {
-  --color-redirection-50: #fef2f2;
-  --color-redirection-100: #fee2e2;
-  --color-redirection-200: #fecaca;
-  --color-redirection-300: #fca5a5;
-  --color-redirection-400: #f87171;
-  --color-redirection-500: #ef4444;
-  --color-redirection-600: #dc2626;
-  --color-redirection-700: #b91c1c;
-  --color-redirection-800: #991b1b;
-  --color-redirection-900: #7f1d1d;
-  --color-redirection-950: #450a0a;
+  --color-redirection-50: #fdf7ec;
+  --color-redirection-100: #faead0;
+  --color-redirection-200: #f4d29d;
+  --color-redirection-300: #edb568;
+  --color-redirection-400: #ea9e3f;
+  --color-redirection-500: #e8912d;
+  --color-redirection-600: #c9761a;
+  --color-redirection-700: #a65d13;
+  --color-redirection-800: #854a10;
+  --color-redirection-900: #6c3c0e;
+  --color-redirection-950: #3d2007;
 
-  --color-dark-50: #f9fafb;
-  --color-dark-100: #f3f4f6;
-  --color-dark-200: #e5e7eb;
-  --color-dark-300: #d1d5db;
-  --color-dark-400: #9ca3af;
-  --color-dark-500: #6b7280;
-  --color-dark-600: #4b5563;
-  --color-dark-700: #374151;
-  --color-dark-800: #1f2937;
-  --color-dark-900: #111827;
-  --color-dark-950: #030712;
+  --color-dark-50: #f3f6fa;
+  --color-dark-100: #e4ebf2;
+  --color-dark-200: #c8d6e3;
+  --color-dark-300: #a2b7cb;
+  --color-dark-400: #7a93ad;
+  --color-dark-500: #56718d;
+  --color-dark-600: #3f5875;
+  --color-dark-700: #2e4460;
+  --color-dark-800: #1f3350;
+  --color-dark-900: #16283f;
+  --color-dark-950: #0d1b2e;
 
-  /* Deep corporate dark/neutral shades (modern tech aesthetic) */
-  --color-corporate-50: #fafafa;
-  --color-corporate-100: #f5f5f5;
-  --color-corporate-200: #e5e5e5;
-  --color-corporate-300: #d4d4d4;
-  --color-corporate-400: #a3a3a3;
-  --color-corporate-500: #737373;
-  --color-corporate-600: #525252;
-  --color-corporate-700: #404040;
-  --color-corporate-800: #272727;
-  --color-corporate-900: #18181b;
-  --color-corporate-950: #111111;
+  /* Brand navy shades (from official logo) */
+  --color-corporate-50: #f3f6fa;
+  --color-corporate-100: #e4ebf2;
+  --color-corporate-200: #c8d6e3;
+  --color-corporate-300: #a2b7cb;
+  --color-corporate-400: #7a93ad;
+  --color-corporate-500: #56718d;
+  --color-corporate-600: #3f5875;
+  --color-corporate-700: #2e4460;
+  --color-corporate-800: #1f3350;
+  --color-corporate-900: #16283f;
+  --color-corporate-950: #0d1b2e;
 
   --font-sans: "DM Sans", Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   --font-display: "DM Sans", Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
@@ -61,7 +61,7 @@ html {
 
 /* Gradient text utility */
 .text-gradient {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #7f1d1d 100%);
+  background: linear-gradient(135deg, #edb568 0%, #e8912d 45%, #c9761a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -86,7 +86,7 @@ html {
 
 /* Buttons */
 .btn-primary {
-  @apply bg-redirection-600 hover:bg-redirection-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-[0_0_20px_rgba(220,38,38,0.25)] hover:shadow-[0_0_30px_rgba(220,38,38,0.4)] transform hover:-translate-y-1 active:scale-95;
+  @apply bg-redirection-600 hover:bg-redirection-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-[0_0_20px_rgba(232,145,45,0.25)] hover:shadow-[0_0_30px_rgba(232,145,45,0.4)] transform hover:-translate-y-1 active:scale-95;
 }
 
 .btn-outline {
@@ -130,8 +130,8 @@ html {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.2); }
-  50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(232, 145, 45, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(232, 145, 45, 0.5); }
 }
 
 .animate-pulse-glow {
@@ -195,9 +195,9 @@ html {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #dc2626;
+  background: #e8912d;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b91c1c;
+  background: #c9761a;
 }

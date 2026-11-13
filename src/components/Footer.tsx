@@ -1,3 +1,5 @@
+import { Logo } from './Logo';
+
 export function Footer() {
   return (
     <footer className="bg-corporate-950 text-corporate-200 border-t border-corporate-700">
@@ -5,14 +7,8 @@ export function Footer() {
         <div className="grid lg:grid-cols-4 gap-12 lg:gap-16 pb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-redirection-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">RI</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white tracking-tight">Redirection<span className="text-redirection-500">Innovation</span></h3>
-                <p className="text-xs text-redirection-300 font-medium uppercase tracking-wider">Philippines</p>
-              </div>
+            <div className="mb-6">
+              <Logo variant="dark" showTagline markClassName="w-11 h-13" />
             </div>
             <p className="text-dark-300 text-sm leading-relaxed max-w-sm">
               Building technology solutions that empower local businesses and connect

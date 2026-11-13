@@ -8,9 +8,9 @@ export function ZebGo() {
   return (
     <section id="zeb-go" className="py-16 lg:py-24 overflow-hidden relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-redirection-900/95">
-        <div className="mesh-blob w-[600px] h-[600px] bg-redirection-600/20 top-[-10%] left-[-10%] rounded-full animate-float" style={{ animationDelay: '0s' }} />
-        <div className="mesh-blob w-[700px] h-[700px] bg-redirection-700/10 bottom-[-15%] right-[-15%] rounded-full animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute inset-0 bg-corporate-950">
+        <div className="mesh-blob w-[600px] h-[600px] bg-redirection-500/15 top-[-10%] left-[-10%] rounded-full animate-float" style={{ animationDelay: '0s' }} />
+        <div className="mesh-blob w-[700px] h-[700px] bg-corporate-800/70 bottom-[-15%] right-[-15%] rounded-full animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="relative z-10 section-container">
@@ -67,7 +67,7 @@ export function ZebGo() {
 
           {/* Right: Visual */}
           <div ref={contentRef.ref} className="relative h-[400px]">
-            <div className="absolute inset-0 bg-gradient-to-b from-redirection-900/80 to-redirection-900 rounded-2xl border border-white/20">
+            <div className="absolute inset-0 bg-gradient-to-b from-corporate-900/80 to-corporate-950 rounded-2xl border border-white/20">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558981806-ec537fae86c9?w=800&q=80')] bg-cover bg-center opacity-30" />
             </div>
             <div className="absolute bottom-8 left-8 right-8">
@@ -93,7 +93,7 @@ export function ZebGo() {
         {/* Divider line */}
         <div className="mt-16 flex items-center gap-4">
           <div className="flex-1 h-px bg-white/20" />
-          <span className="text-xs text-redirection-300/50 uppercase tracking-widest font-semibold">Future Expansion</span>
+          <span className="text-xs text-redirection-300/80 uppercase tracking-widest font-semibold">Future Expansion</span>
           <div className="flex-1 h-px bg-white/20" />
         </div>
 

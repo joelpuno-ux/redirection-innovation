@@ -39,7 +39,7 @@ export function Hero() {
       {/* Background blobs */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="mesh-blob w-[600px] h-[600px] bg-redirection-100 top-[-10%] left-[-10%] rounded-full animate-float" />
-        <div className="mesh-blob w-[700px] h-[700px] bg-red/20 bottom-[-15%] right-[-15%] rounded-full animate-float" style={{ animationDelay: '2s' }} />
+        <div className="mesh-blob w-[700px] h-[700px] bg-redirection-300/40 bottom-[-15%] right-[-15%] rounded-full animate-float" style={{ animationDelay: '2s' }} />
         <div className="mesh-blob w-[400px] h-[400px] bg-redirection-200 top-[30%] right-[20%] rounded-full animate-float" style={{ animationDelay: '4s' }} />
       </div>
 
@@ -50,7 +50,7 @@ export function Hero() {
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-redirection-600 animate-pulse" />
               <span className="text-sm font-semibold text-redirection-600 uppercase tracking-wider">
-                Redirection Innovation Inc.
+                Serving with Purpose, Directing Success.
               </span>
             </div>
 
