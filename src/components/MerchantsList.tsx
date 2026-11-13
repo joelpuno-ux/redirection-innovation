@@ -4,12 +4,19 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 import { Loader2 } from 'lucide-react'
 
 interface Merchant {
-  id: string | number
-  business_name: string
-  owner_name: string
-  category: string
-  contact_number: string
-  status: string
+  id: string
+  name?: string | null
+  merchant_name?: string | null
+  merchant_code?: string | null
+  category_type?: string | null
+  cuisine_type?: string | null
+  barangay?: string | null
+  address?: string | null
+  rating?: number | string | null
+  eta_minutes?: number | null
+  is_open?: boolean | null
+  is_active?: boolean | null
+  created_at?: string | null
 }
 
 export function MerchantsList() {
@@ -88,29 +95,50 @@ export function MerchantsList() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-slate-200">
-                  <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Business Name</th>
-                  <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Owner</th>
+                  <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Merchant</th>
                   <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Category</th>
-                  <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Contact</th>
+                  <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Location</th>
+                  <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Rating / ETA</th>
                   <th className="text-left text-sm font-medium text-slate-600 py-3 px-4">Status</th>
                 </tr>
               </thead>
               <tbody>
-                {merchants.map((m) => (
-                  <tr key={m.id} className="border-b border-slate-100">
-                    <td className="text-left py-3 px-4 font-medium text-slate-900">{m.business_name}</td>
-                    <td className="text-left py-3 px-4 text-slate-600">{m.owner_name}</td>
-                    <td className="text-left py-3 px-4 text-slate-600">{m.category}</td>
-                    <td className="text-left py-3 px-4 text-slate-600">{m.contact_number}</td>
-                    <td className="text-left py-3 px-4">
-                      <span
-                        className={`inline-flex items-center px-2 py-1 rounded text-xs ${m.status === 'pending' ? 'amber' : m.status === 'active' ? 'green' : 'red'}-600 text-${m.status === 'pending' ? 'amber' : m.status === 'active' ? 'green' : 'red'}-100`}
-                      >
-                        {m.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
+                {merchants.map((m) => {
+                  const displayName = m.name || m.merchant_name || 'Unknown merchant'
+                  const category = m.category_type || m.cuisine_type || '—'
+                  const location = [m.barangay, m.address].filter(Boolean).join(', ') || '—'
+                  const ratingNum = typeof m.rating === 'number' ? m.rating : parseFloat(String(m.rating ?? '0')) || 0
+                  const open = Boolean(m.is_open)
+                  const active = Boolean(m.is_active)
+                  return (
+                    <tr key={m.id} className="border-b border-slate-100">
+                      <td className="text-left py-3 px-4">
+                        <p className="font-medium text-slate-900">{displayName}</p>
+                        {m.merchant_code ? (
+                          <p className="text-xs text-slate-400">{m.merchant_code}</p>
+                        ) : null}
+                      </td>
+                      <td className="text-left py-3 px-4 text-slate-600">{category}</td>
+                      <td className="text-left py-3 px-4 text-slate-600">{location}</td>
+                      <td className="text-left py-3 px-4 text-slate-600">
+                        ⭐ {ratingNum.toFixed(1)} · {m.eta_minutes ?? '—'} min
+                      </td>
+                      <td className="text-left py-3 px-4">
+                        <span
+                          className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${
+                            active && open
+                              ? 'bg-green-100 text-green-700'
+                              : active
+                                ? 'bg-amber-100 text-amber-700'
+                                : 'bg-red-100 text-red-700'
+                          }`}
+                        >
+                          {active && open ? 'Open' : active ? 'Active · Closed' : 'Inactive'}
+                        </span>
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>
