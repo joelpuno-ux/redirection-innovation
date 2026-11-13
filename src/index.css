@@ -99,7 +99,7 @@ html {
 
 /* Layout helpers */
 .section-container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .section-title {
@@ -107,7 +107,7 @@ html {
 }
 
 .section-subtitle {
-  @apply text-lg md:text-xl text-dark-600 mb-12 lg:mb-20 text-center max-w-2xl mx-auto leading-relaxed;
+  @apply text-lg md:text-xl text-dark-600 mb-10 lg:mb-14 text-center max-w-2xl mx-auto leading-relaxed;
 }
 
 .section-label {

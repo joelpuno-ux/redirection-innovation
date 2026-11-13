@@ -2,9 +2,9 @@ import { Globe, Users, Rocket } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-white">
+    <section id="about" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-20">
+        <div className="text-center mb-10 lg:mb-14">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-redirection-100 text-redirection-700 text-sm font-medium mb-6">
             <span className="w-2 h-2 rounded-full bg-redirection-600" />
             Corporate Profile

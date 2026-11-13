@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer className="bg-corporate-950 text-corporate-200 border-t border-corporate-700">
-      <div className="section-container">
+      <div className="section-container pt-16 pb-8">
         <div className="grid lg:grid-cols-4 gap-12 lg:gap-16 pb-12">
           {/* Brand */}
           <div className="lg:col-span-2">

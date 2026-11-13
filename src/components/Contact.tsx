@@ -2,9 +2,9 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="contact" className="py-16 lg:py-24 relative overflow-hidden">
       <div className="section-container">
-        <div className="text-center mb-12 lg:mb-20">
+        <div className="text-center mb-10 lg:mb-14">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-redirection-100 text-redirection-700 text-sm font-medium mb-6">
             <span className="w-2 h-2 rounded-full bg-redirection-600" />
             Get In Touch
@@ -103,7 +103,7 @@ export function Contact() {
         </div>
 
         {/* Partnership Highlights */}
-        <div className="mt-16 lg:mt-24 rounded-2xl bg-redirection-600 p-8 lg:p-12 text-white shadow-premium-red overflow-hidden relative">
+        <div className="mt-12 lg:mt-16 rounded-2xl bg-redirection-600 p-8 lg:p-12 text-white shadow-premium-red overflow-hidden relative">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-redirection-400/20 via-redirection-900/0 to-redirection-900/0" />
           <div className="relative z-10 text-center">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">Ready to grow your business?</h3>

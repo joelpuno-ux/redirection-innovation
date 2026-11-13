@@ -35,7 +35,7 @@ export function Hero() {
   const { ref, isVisible } = useScrollReveal(0.1, 0);
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-corporate-50 via-corporate-100 to-corporate-50">
+    <section id="home" ref={ref} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-corporate-50 via-corporate-100 to-corporate-50">
       {/* Background blobs */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="mesh-blob w-[600px] h-[600px] bg-redirection-100 top-[-10%] left-[-10%] rounded-full animate-float" />

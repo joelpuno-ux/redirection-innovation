@@ -44,15 +44,15 @@ const features = [
 ];
 
 export function KabyawEats() {
-  const headerRef = useScrollReveal(0.1, 0);
-  const ecosystemRef = useScrollReveal(0.1, 100);
-  const cardsRef = useScrollReveal(0.1, 200);
-  const benefitsRef = useScrollReveal(0.1, 300);
+  const headerRef = useScrollReveal<HTMLDivElement>(0.1, 0);
+  const ecosystemRef = useScrollReveal<HTMLDivElement>(0.1, 100);
+  const cardsRef = useScrollReveal<HTMLDivElement>(0.1, 200);
+  const benefitsRef = useScrollReveal<HTMLDivElement>(0.1, 300);
 
   return (
-    <section id="products" className="py-20 lg:py-28 bg-white">
+    <section id="products" className="py-16 lg:py-24 bg-white">
       <div className="section-container">
-        <div className="text-center mb-16 lg:mb-24">
+        <div ref={headerRef.ref} className="text-center mb-12 lg:mb-16">
           <div
             className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-redirection-50/50 text-redirection-700 text-sm font-medium mb-6 border border-redirection-100 ${
               headerRef.isVisible ? 'reveal active' : 'reveal reveal-delay-1'
@@ -80,7 +80,8 @@ export function KabyawEats() {
 
         {/* App Ecosystem Cards */}
         <div
-          className={`grid lg:grid-cols-3 gap-6 mb-20 lg:mb-28 ${
+          ref={ecosystemRef.ref}
+          className={`grid lg:grid-cols-3 gap-6 mb-14 lg:mb-20 ${
             ecosystemRef.isVisible ? 'reveal active' : 'reveal reveal-delay-4'
           }`}
         >
@@ -105,7 +106,8 @@ export function KabyawEats() {
 
         {/* Download & Action Cards */}
         <div
-          className={`grid lg:grid-cols-3 gap-6 mb-20 lg:mb-28 ${
+          ref={cardsRef.ref}
+          className={`grid lg:grid-cols-3 gap-6 mb-14 lg:mb-20 ${
             cardsRef.isVisible ? 'reveal active' : 'reveal reveal-delay-5'
           }`}
         >

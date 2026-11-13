@@ -36,10 +36,10 @@ export const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-corporate-50 border-t border-corporate-200">
+    <section id="services" className="py-16 lg:py-24 bg-corporate-50 border-t border-corporate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <span className="text-xs font-semibold tracking-wider text-redirection-600 uppercase bg-redirection-50 px-3 py-1 rounded-full border border-redirection-100">
             Our Expertise
           </span>
