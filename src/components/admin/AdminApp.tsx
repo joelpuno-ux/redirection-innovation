@@ -1,12 +1,26 @@
 import { Loader2, ShieldAlert } from 'lucide-react';
+import { useEffect } from 'react';
 import { isSupabaseConfigured } from '../../lib/supabase';
-import { useAdminSession } from '../../lib/adminAuth';
+import { useAdminSession, adminSignOut, setSignOutReason } from '../../lib/adminAuth';
 import { AdminLogin } from './AdminLogin';
 import { AdminDashboard } from './AdminDashboard';
 
 /** Gate ng #/admin route: config notice → loading → login → dashboard. */
 export function AdminApp() {
   const { loading, user } = useAdminSession();
+
+  // Safety: kapag LUMIPAT ng page ang admin (hash change palayo sa #/admin),
+  // automatic na isinasara ang session — kahit makalimutan niyang mag-sign-out.
+  useEffect(() => {
+    const onHash = () => {
+      if (!window.location.hash.startsWith('#/admin')) {
+        setSignOutReason('left');
+        void adminSignOut();
+      }
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   if (!isSupabaseConfigured) {
     return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Lock } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -59,6 +59,14 @@ export function Navbar() {
             >
               Download Kabyaw Eats
             </a>
+            <a
+              href="#/admin"
+              title="Admin Console"
+              aria-label="Admin Console"
+              className="w-10 h-10 rounded-xl border border-corporate-200 text-corporate-500 hover:text-redirection-600 hover:border-redirection-300 flex items-center justify-center transition-colors"
+            >
+              <Lock className="w-4 h-4" />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,6 +96,14 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
+            <a
+              href="#/admin"
+              className="flex items-center gap-2 px-4 py-3 text-dark-600 hover:bg-redirection-50 hover:text-redirection-600 rounded-xl transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              <Lock className="w-4 h-4" />
+              Admin Console
+            </a>
             <a
               href="https://play.google.com/store.apps/details?id=com.kabyaw.eats"
               target="_blank"

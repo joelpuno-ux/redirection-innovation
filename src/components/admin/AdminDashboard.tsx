@@ -3,7 +3,7 @@ import {
   LogOut, Download, AlertTriangle, RefreshCw, Wallet, Receipt, TrendingUp, Store, BookOpen, Scale,
 } from 'lucide-react';
 import type { User } from '@supabase/supabase-js';
-import { adminSignOut } from '../../lib/adminAuth';
+import { adminSignOut, useIdleSignOut } from '../../lib/adminAuth';
 import {
   fetchSalesTransactions,
   fetchFinancialRecords,
@@ -42,6 +42,9 @@ function Kpi({ label, value, sub, icon }: { label: string; value: string; sub?: 
 }
 
 export function AdminDashboard({ user }: Props) {
+  // Auto sign-out pagkatapos ng 5 minuto ng inactivity (safety net).
+  useIdleSignOut();
+
   const [tx, setTx] = useState<{ rows: SalesTransaction[]; error: string | null; missingTable: boolean } | null>(null);
   const [ledger, setLedger] = useState<{ rows: FinancialRecord[]; error: string | null; missingTable: boolean } | null>(null);
   const [month, setMonth] = useState('all');
@@ -136,7 +139,7 @@ export function AdminDashboard({ user }: Props) {
             <div className="min-w-0">
               <h1 className="text-base font-bold text-corporate-900 leading-tight truncate">Admin Console</h1>
               <p className="text-[11px] text-corporate-500 leading-tight truncate">
-                Book of Accounts · Sales &amp; Transaction Summaries
+                Book of Accounts · Sales &amp; Transaction Summaries · auto sign-out after 5 min idle
               </p>
             </div>
           </div>

@@ -68,6 +68,11 @@ export function Footer() {
                   Privacy Policy
                 </button>
               </li>
+              <li>
+                <a href="#/admin" className="text-dark-300 hover:text-redirection-400 transition-colors text-sm">
+                  Admin Console
+                </a>
+              </li>
             </ul>
           </div>
 

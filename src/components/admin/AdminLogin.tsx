@@ -1,8 +1,9 @@
 import { useState, type FormEvent } from 'react';
 import { Lock, ShieldCheck, Loader2 } from 'lucide-react';
-import { adminSignIn } from '../../lib/adminAuth';
+import { adminSignIn, takeSignOutReason } from '../../lib/adminAuth';
 
 export function AdminLogin() {
+  const [reason] = useState(() => takeSignOutReason());
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -38,6 +39,14 @@ export function AdminLogin() {
               Book of Accounts, sales &amp; transaction summaries. Authorized personnel only.
             </p>
           </div>
+
+          {reason && (
+            <div className="mb-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800" role="status">
+              {reason === 'idle'
+                ? 'For your security, your session was automatically closed after 5 minutes of inactivity. Please sign in again.'
+                : 'For your security, your session was automatically closed when you left the admin page. Please sign in again.'}
+            </div>
+          )}
 
           {error && (
             <div className="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">

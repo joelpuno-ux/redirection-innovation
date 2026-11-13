@@ -13,6 +13,40 @@ export const isSupabaseConfigured =
   !SUPABASE_URL.includes('YOUR-PROJECT') &&
   SUPABASE_ANON_KEY.length > 20
 
+/** Session storage lang ang auth persistence: kapag nagsara ang tab, automatic na
+ * nawawala ang session (per-tab ang sessionStorage). Survive lang ito sa refresh
+ * ng PAREHONG tab — protektado pa rin ng 5-min idle rule at leave-page sign-out.
+ */
+const safeSessionStorage = {
+  getItem: (key: string) => {
+    try {
+      return window.sessionStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  },
+  setItem: (key: string, value: string) => {
+    try {
+      window.sessionStorage.setItem(key, value);
+    } catch {
+      /* ignore */
+    }
+  },
+  removeItem: (key: string) => {
+    try {
+      window.sessionStorage.removeItem(key);
+    } catch {
+      /* ignore */
+    }
+  },
+};
+
 export const supabase: SupabaseClient | null = isSupabaseConfigured
-  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: {
+        storage: safeSessionStorage,
+        persistSession: true,
+        autoRefreshToken: true,
+      },
+    })
   : null
