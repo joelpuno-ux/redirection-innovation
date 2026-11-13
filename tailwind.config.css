@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@source {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"];
+}
+
+@theme {
+  /* Primary Red Brand Colors */
+  --color-redirection-50: #fff5f5;
+  --color-redirection-100: #fed7d7;
+  --color-redirection-200: #feb2b2;
+  --color-redirection-300: #fc9191;
+  --color-redirection-400: #fa807c;
+  --color-redirection-500: #f87171;
+  --color-redirection-600: #ef4444;
+  --color-redirection-700: #dc2626;
+  --color-redirection-800: #b91c1c;
+  --color-redirection-900: #991b1b;
+  --color-redirection-950: #7f1d1d;
+
+  /* Deep Corporate Dark/Neutral Shades */
+  --color-corporate-50: #fafafa;
+  --color-corporate-100: #f5f5f5;
+  --color-corporate-200: #e5e5e5;
+  --color-corporate-300: #d4d4d4;
+  --color-corporate-400: #a3a3a3;
+  --color-corporate-500: #737373;
+  --color-corporate-600: #525252;
+  --color-corporate-700: #404040;
+  --color-corporate-800: #272727;
+  --color-corporate-900: #18181b;
+  --color-corporate-950: #111111;
+
+  /* Color utilities */
+  --color-bg: var(--color-corporate-50);
+  --color-surface: var(--color-corporate-100);
+  --color-text: var(--color-corporate-900);
+  --color-text-muted: var(--color-corporate-600);
+  --color-border: var(--color-corporate-300);
+
+  --font-sans: Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  --font-display: "DM Sans", Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+  --radius-3xl: 1rem;
+  --radius-lg: 0.5rem;
+}
