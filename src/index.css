@@ -40,8 +40,8 @@
   --color-corporate-900: #18181b;
   --color-corporate-950: #111111;
 
-  --font-sans: Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  --font-display: Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  --font-sans: "DM Sans", Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  --font-display: "DM Sans", Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 
   --radius-xl: 0.75rem;
   --radius-2xl: 1rem;

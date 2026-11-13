@@ -86,7 +86,7 @@ export function Hero() {
             {features.map((feature, idx) => (
               <div
                 key={feature.title}
-                className="glass-panel rounded-2xl p-6 group card-hover cursor-pointer"
+                className="bg-white/85 backdrop-blur-md border border-white/50 shadow-lg rounded-2xl p-6 group card-hover cursor-pointer"
               >
                 <div className="w-12 h-12 bg-redirection-50 text-redirection-600 rounded-xl flex items-center justify-center mb-4 group-hover:bg-redirection-600 group-hover:text-white transition-colors">
                   {feature.icon}
