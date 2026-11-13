@@ -1,5 +1,3 @@
-import { Logo } from './Logo';
-
 export function Footer() {
   return (
     <footer className="bg-corporate-950 text-corporate-200 border-t border-corporate-700">
@@ -7,8 +5,12 @@ export function Footer() {
         <div className="grid lg:grid-cols-4 gap-12 lg:gap-16 pb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="mb-6">
-              <Logo variant="dark" showTagline markClassName="w-11 h-13" />
+            <div className="mb-6 inline-block bg-white rounded-2xl p-4 shadow-lg">
+              <img
+                src="/logo-full.png"
+                alt="ReDirection Innovations Inc — Serving with Purpose, Directing Success."
+                className="w-56 h-auto"
+              />
             </div>
             <p className="text-dark-300 text-sm leading-relaxed max-w-sm">
               Building technology solutions that empower local businesses and connect
