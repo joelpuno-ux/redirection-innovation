@@ -77,7 +77,7 @@ export function About() {
                   <Globe className="w-5 h-5 text-redirection-600" />
                 </div>
                 <h4 className="font-bold text-corporate-900 mb-2">Philippine Based</h4>
-                <p className="text-sm text-corporate-500">Headquartered in the Philippines, serving Central Luzon and beyond.</p>
+                <p className="text-sm text-corporate-500">Headquartered in Cabiao, Nueva Ecija, serving Central Luzon and beyond.</p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-corporate-200 shadow-sm hover:border-redirection-300 transition-all duration-300">
                 <div className="w-10 h-10 bg-redirection-50 rounded-lg flex items-center justify-center mb-4">

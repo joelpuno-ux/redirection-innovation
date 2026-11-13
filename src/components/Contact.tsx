@@ -87,17 +87,17 @@ export function Contact() {
             <InfoCard
               icon={<MapPin className="w-5 h-5" />}
               title="Head Office"
-              description="Redirection Innovation Inc.<br />Central Luzon, Philippines"
+              description="Redirection Innovation Inc.<br />Purok 4, San Carlos, Cabiao, Nueva Ecija"
             />
             <InfoCard
               icon={<Phone className="w-5 h-5" />}
               title="Partner Hotline"
-              description="+63 9xx xxx xxxx<br />Merchant & Rider Support"
+              description="09613497061<br />Merchant & Rider Support"
             />
             <InfoCard
               icon={<Mail className="w-5 h-5" />}
               title="Email"
-              description="partners@redirectioninnovation.ph<br />business@redirectioninnovation.ph"
+              description="support@redirectioninnovation.com"
             />
           </div>
         </div>
@@ -112,7 +112,7 @@ export function Contact() {
               and a growing customer base in Cabiao and Gapan City.
             </p>
             <a
-              href="mailto:partners@redirectioninnovation.ph"
+              href="mailto:support@redirectioninnovation.com"
               className="inline-flex items-center gap-2 bg-white text-redirection-600 hover:bg-redirection-50 font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               <Send className="w-4 h-4" />

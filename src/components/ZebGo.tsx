@@ -4,7 +4,6 @@ import { useScrollReveal } from '../lib/useScrollReveal';
 export function ZebGo() {
   const headerRef = useScrollReveal<HTMLDivElement>(0.1, 0);
   const contentRef = useScrollReveal<HTMLDivElement>(0.1, 100);
-  const visualRef = useScrollReveal<HTMLDivElement>(0.1, 200);
 
   return (
     <section id="zeb-go" className="py-16 lg:py-24 overflow-hidden relative">
@@ -34,8 +33,9 @@ export function ZebGo() {
               Introducing Zeb Go
             </h2>
             <p className="text-lg text-redirection-100/80 leading-relaxed max-w-lg">
-              A specialized local motorcycle delivery service designed to get your parcels,
-              documents, and essentials across town — fast and on time.
+              A local TNVS (Transport Network Vehicle Service) motorcycle taxi platform.
+              Book a safe, affordable ride with trusted community riders and get to school,
+              work, or the market — fast and on time.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -56,7 +56,7 @@ export function ZebGo() {
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-4">
-              {[['24/7', 'On-Demand Service'], ['Cabiao', 'Gapan City Coverage']].map(([label, desc]) => (
+              {[['24/7', 'On-Demand Rides'], ['TNVS', 'Motorcycle Taxi Service']].map(([label, desc]) => (
                 <div key={label} className="bg-white/10 rounded-xl p-4 border border-white/20 backdrop-blur-sm">
                   <p className="text-xs text-redirection-200/60 uppercase tracking-wider font-semibold mb-1">{label}</p>
                   <p className="text-white text-sm">{desc}</p>
@@ -78,7 +78,7 @@ export function ZebGo() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-dark-900 text-lg">Zeb Go</h3>
-                    <p className="text-sm text-dark-600 font-medium">"Save time, go on-time."</p>
+                    <p className="text-sm text-dark-600 font-medium">"Your ride, on time."</p>
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-dark-400 uppercase font-bold">Launching Soon</p>

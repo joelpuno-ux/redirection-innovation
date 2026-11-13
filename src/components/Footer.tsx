@@ -70,15 +70,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-dark-300">
                 <span className="w-5 text-redirection-400">📍</span>
-                <span>Central Luzon, Philippines</span>
+                <span>Purok 4, San Carlos, Cabiao, Nueva Ecija</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-dark-300">
                 <span className="w-5 text-redirection-400">✉️</span>
-                <span>partners@redirectioninnovation.ph</span>
+                <span>support@redirectioninnovation.com</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-dark-300">
                 <span className="w-5 text-redirection-400">📱</span>
-                <span>+63 9xx xxx xxxx</span>
+                <span>0961 349 7061</span>
               </li>
             </ul>
             <div className="mt-6 flex gap-3">
