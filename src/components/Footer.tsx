@@ -29,7 +29,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#zeb-go" className="text-dark-300 hover:text-redirection-400 transition-colors text-sm">
-                  Zeb Go
+                  GoZeb
                 </a>
               </li>
               <li>

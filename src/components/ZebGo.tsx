@@ -1,4 +1,4 @@
-import { Clock, Star, Bike, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Clock, Star } from 'lucide-react';
 import { useScrollReveal } from '../lib/useScrollReveal';
 
 export function ZebGo() {
@@ -30,7 +30,7 @@ export function ZebGo() {
                 headerRef.isVisible ? 'reveal active' : 'reveal reveal-delay-2'
               }`}
             >
-              Introducing Zeb Go
+              Introducing GoZeb
             </h2>
             <p className="text-lg text-redirection-100/80 leading-relaxed max-w-lg">
               A local TNVS (Transport Network Vehicle Service) motorcycle taxi platform.
@@ -70,15 +70,18 @@ export function ZebGo() {
             <div className="absolute inset-0 bg-gradient-to-b from-corporate-900/80 to-corporate-950 rounded-2xl border border-white/20">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558981806-ec537fae86c9?w=800&q=80')] bg-cover bg-center opacity-30" />
             </div>
+            <img
+              src="/gozeb-sign.png"
+              alt="GoZeb — Save time, go on-time."
+              className="absolute top-6 left-1/2 -translate-x-1/2 h-[62%] w-auto object-contain drop-shadow-2xl"
+            />
             <div className="absolute bottom-8 left-8 right-8">
               <div className="bg-white/90 rounded-2xl p-6 shadow-xl shadow-red/20">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-redirection-600 rounded-xl flex items-center justify-center">
-                    <Bike className="w-6 h-6 text-white" />
-                  </div>
+                  <img src="/gozeb-sign.png" alt="GoZeb" className="w-12 h-12 rounded-xl shadow-md object-contain" />
                   <div className="flex-1">
-                    <h3 className="font-bold text-dark-900 text-lg">Zeb Go</h3>
-                    <p className="text-sm text-dark-600 font-medium">"Your ride, on time."</p>
+                    <h3 className="font-bold text-dark-900 text-lg">GoZeb</h3>
+                    <p className="text-sm text-dark-600 font-medium">"Save time, go on-time."</p>
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-dark-400 uppercase font-bold">Launching Soon</p>

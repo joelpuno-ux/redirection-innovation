@@ -61,13 +61,18 @@ export function KabyawEats() {
             <span className="w-2 h-2 rounded-full bg-redirection-600 animate-pulse" />
             Flagship Product
           </div>
-          <h2
-            className={`section-title ${
+          <div
+            className={`mb-6 ${
               headerRef.isVisible ? 'reveal active' : 'reveal reveal-delay-2'
             }`}
           >
-            Kabyaw Eats
-          </h2>
+            <h2 className="sr-only">Kabyaw Eats</h2>
+            <img
+              src="/kabyaweats-logo.png"
+              alt="Kabyaw Eats — food delivery and online services"
+              className="h-24 md:h-28 w-auto mx-auto"
+            />
+          </div>
           <p
             className={`section-subtitle ${
               headerRef.isVisible ? 'reveal active' : 'reveal reveal-delay-3'

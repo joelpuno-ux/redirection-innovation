@@ -32,7 +32,7 @@ export function About() {
               <h3 className="text-xl font-bold text-corporate-900 mb-4">Our Story</h3>
               <p className="text-corporate-600 leading-relaxed">
                 Redirection Innovation Inc. was founded with a vision to redirect how local
-                businesses operate in the digital age. From Kabyaw Eats to Zeb Go and beyond,
+                businesses operate in the digital age. From Kabyaw Eats to GoZeb and beyond,
                 we create tools that serve real communities.
               </p>
             </div>
