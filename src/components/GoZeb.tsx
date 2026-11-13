@@ -84,8 +84,8 @@ export function GoZeb() {
                     <p className="text-sm text-dark-600 font-medium">"Save time, go on-time."</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-dark-400 uppercase font-bold">Launching Soon</p>
-                    <p className="font-bold text-dark-900">Q1 2027</p>
+                    <p className="text-xs text-dark-400 uppercase font-bold">Expected Launch</p>
+                    <p className="font-bold text-dark-900">Q4 2027 – Q1 2028</p>
                   </div>
                 </div>
               </div>
