@@ -46,20 +46,40 @@ alter table public.admin_users enable row level security;
 alter table public.sales_transactions enable row level security;
 alter table public.financial_records enable row level security;
 
+-- Membership check function. SECURITY DEFINER: tumatakbo bilang table owner
+-- kaya ang select sa loob ay hindi dumadaan sa RLS — iniiwasan nito ang
+-- "infinite recursion detected in policy for relation admin_users" na bug
+-- kapag ang policy ay direktang nagrereference sa sarili niyang table.
+create or replace function public.is_admin()
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists (
+    select 1 from public.admin_users a
+    where a.id = auth.uid()
+  );
+$$;
+
+revoke all on function public.is_admin() from public;
+grant execute on function public.is_admin() to authenticated;
+
 drop policy if exists "admins can read admin_users" on public.admin_users;
 create policy "admins can read admin_users" on public.admin_users
   for select to authenticated
-  using (exists (select 1 from public.admin_users a where a.id = auth.uid()));
+  using (public.is_admin());
 
 drop policy if exists "admins can read sales_transactions" on public.sales_transactions;
 create policy "admins can read sales_transactions" on public.sales_transactions
   for select to authenticated
-  using (exists (select 1 from public.admin_users a where a.id = auth.uid()));
+  using (public.is_admin());
 
 drop policy if exists "admins can read financial_records" on public.financial_records;
 create policy "admins can read financial_records" on public.financial_records
   for select to authenticated
-  using (exists (select 1 from public.admin_users a where a.id = auth.uid()));
+  using (public.is_admin());
 
 -- Explicit grants: anon role = walang access; authenticated = via policies lang
 revoke all on public.admin_users, public.sales_transactions, public.financial_records from anon;
