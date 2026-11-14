@@ -70,14 +70,24 @@ create index if not exists sales_transactions_date_idx on public.sales_transacti
 create index if not exists financial_records_date_idx on public.financial_records (entry_date desc);
 
 -- ============================================================================
--- 4) I-REGISTER ANG ADMIN LOGIN
+-- 4) I-REGISTER ANG MGA ADMIN LOGIN
 --    Step A: Supabase Dashboard → Authentication → Users → "Add user"
---            (ilagay ang email + password, at i-check ang "Auto Confirm User")
---    Step B: i-run ang insert na ito (palitan ang email kung iba):
+--            (email + password, at i-check ang "Auto Confirm User") para sa BAWAT email
+--    Step B: i-run ang insert na ito (idempotent; full version + status report
+--            ay nasa supabase/register_admins.sql):
 -- ============================================================================
--- insert into public.admin_users (id, email)
--- select id, email from auth.users
--- where email = 'support@redirectioninnovation.com';
+insert into public.admin_users (id, email)
+select u.id, u.email
+from auth.users u
+where lower(u.email) in (
+  'support@redirectioninnovation.com',
+  'lucy_puno@redirectioninnovation.com',
+  'joel_puno@redirectioninnovation.com',
+  'eliezelmendoza@redirectioninnovation.com'
+)
+on conflict (id) do update set
+  email = excluded.email,
+  role = 'admin';
 
 -- ============================================================================
 -- OPTIONAL: sample Book of Accounts entries para makita ang dashboard layout
